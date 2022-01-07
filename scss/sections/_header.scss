@@ -1,0 +1,118 @@
+header{
+    background-color: blue;
+    padding-bottom: 30px;
+}
+
+.header-contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.priority-links{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 5px;
+}
+
+.nav-wrapper{
+    position: relative;
+}
+
+
+.hamburger{
+    position: absolute;
+    top: 30px;
+    right: 20px;
+    cursor: pointer;
+}
+
+.hamburger input[type="checkbox"]{
+    visibility: hidden;
+    display: none;
+    width: 30px;
+    height: 30px;
+    padding: 10px;
+}
+
+.bar{
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.top {
+    bottom: 4px;
+    height: 3px;
+    width: 30px;
+    background-color: black;
+    position: absolute;
+    transition: 0.3s;
+    border-radius: 40px;
+}
+
+.middle {
+    height: 3px;
+    width: 30px;
+    background-color: black;
+    position: absolute;
+    transition: 0.3s;
+    border-radius: 40px;
+}
+
+.bottom {
+    top: 7px;
+    bottom: 14px;
+    height: 3px;
+    width: 30px;
+    background-color: black;
+    position: absolute;
+    transition: 0.3s;
+    border-radius: 40px;
+}
+
+.hamburger input[type="checkbox"]:checked ~ .bar .top {
+    transform: rotate(-45deg);
+    width: 30px;
+    transform-origin: right;
+    top: -11px;
+    right: -16px;
+}
+.hamburger input[type="checkbox"]:checked ~ .bar .bottom {
+    transform: rotate(45deg);
+    width: 30px;
+    transform-origin: right;
+    top: 11px;
+    right: -18px;
+}
+
+.hamburger input[type="checkbox"]:checked ~ .bar .middle {
+    transform: translate(10px);
+    width: 30px;
+    opacity: 0;
+}
+
+.main-navigation{
+    margin-top: 10px;
+    display: none;
+    
+}
+
+.hamburger input[type="checkbox"]:checked ~ .main-navigation{
+    display: block;
+}
+
+.drop-down_items {
+    margin-left: 40px;
+    display: none;
+    max-width: 150px;
+}
+
+.drop-down:hover .drop-down_items{
+    display: flex;
+    flex-direction: column;
+}
